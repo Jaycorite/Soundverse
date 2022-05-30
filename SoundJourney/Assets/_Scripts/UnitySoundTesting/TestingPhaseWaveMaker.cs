@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SoundMakers;
 
 [RequireComponent(typeof(AudioSource))]
 public class TestingPhaseWaveMaker : MonoBehaviour

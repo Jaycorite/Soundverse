@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
-
+using SoundMakers;
 public class SynthesizerHandler : MonoBehaviour
 {
 
@@ -56,15 +56,15 @@ public class SynthesizerHandler : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(signalsToSave.Count);
+        //Debug.Log(signalsToSave.Count);
         //Debug.Log(sampleRate*3);
-        if (!playing && signalsToSave.Count > sampleRate*2)
+        /*if (!playing && signalsToSave.Count > sampleRate*2)
         {
             Debug.Log(Application.persistentDataPath + "   PATH");
             StaticSaver.SaveStuff(signalsToSave, "signals" + currentDspTime);
             signalsToSave.Clear();
         }
-
+        */
         sampleRate = AudioSettings.outputSampleRate;
         currentDspTime = AudioSettings.dspTime;
 
@@ -307,7 +307,7 @@ public class SynthesizerHandler : MonoBehaviour
                     signalValue += soundMakers[currentSoundMaker].SignalValueAtTime((float)preciseDspTime, f);
                 }
                 signalValue = signalValue * Mastervol;
-                signalsToSave.Add(new saveInfo() { SignalVal = (float)signalValue, Time = (float)preciseDspTime});
+                //signalsToSave.Add(new saveInfo() { SignalVal = (float)signalValue, Time = (float)preciseDspTime});
                 //signalValue += soundMakers[currentSoundMaker].GetSound((float)preciseDspTime, Frequency);
                 for (int j = 0; j < channels; j++)
                 {

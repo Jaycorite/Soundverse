@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using SoundMakers;
 
 [CreateAssetMenu(fileName = "SoundsData", menuName = "ScriptableObjects/SoundsHolder", order = 1)]
 public class SoundsHolder : ScriptableObject
